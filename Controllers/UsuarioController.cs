@@ -4,9 +4,11 @@ namespace ProjetoSite1.Controllers
 {
     public class UsuarioController : Controller
     {
-        public IActionResult Index()
+        public IActionResult Login()
         {
             return View();
         }
+
+
     }
 }
