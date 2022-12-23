@@ -26,13 +26,13 @@ namespace ProjetoSite1.Models
 
         [Required]
         [Display(Name = "Email")]
-        [EmailAddress(ErrorMessage = "Invalid email address")]
+        [EmailAddress(ErrorMessage = "E-mail em formato inválido.")]        
         public string Email { get; set; }
 
         [Display(Name = "Senha")]
         [Required(ErrorMessage = "Password is required")]
-        [RegularExpression("^([a - zA - Z0 - 9@*#]{4,10})$", ErrorMessage = "A senha está fora dos padrões")]
-        [StringLength(4, ErrorMessage = "Must be between 5 and 255 characters", MinimumLength = 10)]
+        [RegularExpression(@"^([a - zA - Z0 - 9@*#]{4,10})$", ErrorMessage = "A senha está fora dos padrões")]
+        [StringLength(10, ErrorMessage = "A senha deve ter no minimo 4 e no máximo 10 caracteres", MinimumLength = 4)]
         [DataType(DataType.Password)]
         public string Password { get; set; }
 
