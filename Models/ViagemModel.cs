@@ -31,7 +31,7 @@ namespace ProjetoSite1.Models
         public DateTime? DateTime { get; set; }
 
         [Required]
-        [RegularExpression(@"^[0-9]+(\.[0-9]+)?$")]
+        [RegularExpression(@"^[0-9]+(\.[0-9]+)?$", ErrorMessage = "Formato do preço fora do padrão")]
         [Range(0, 99999999999.99)]
         public decimal? Preco { get; set; }
 
