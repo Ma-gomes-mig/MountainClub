@@ -26,6 +26,7 @@ namespace ProjetoSite1.Models
 
         [Required]
         [Display(Name = "Email")]
+        [RegularExpression(@"^\w +[\w\.] *\@\w + ((-\w +)|(\w*))\.[a-z]{2,3}$")]
         [EmailAddress(ErrorMessage = "E-mail em formato inválido.")]        
         public string Email { get; set; }
 
