@@ -32,7 +32,7 @@ namespace ProjetoSite1.Models
 
         [Required]
         [RegularExpression(@"^[0-9]+(\.[0-9]+)?$")]
-        [Range(0, 9999999999999999.99)]
+        [Range(0, 99999999999.99)]
         public decimal? Preco { get; set; }
 
         public int CategoriaId { get; set; }
