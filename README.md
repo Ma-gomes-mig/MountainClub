@@ -1,2 +1,2 @@
 # MountainClub
-Site criado a partir de um template grátis
+Site de venda de viagem.
