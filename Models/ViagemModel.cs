@@ -1,5 +1,7 @@
-﻿using Microsoft.Identity.Client;
+﻿using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using Microsoft.Identity.Client;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ProjetoSite1.Models
 {
@@ -30,9 +32,11 @@ namespace ProjetoSite1.Models
         [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = false)]
         public DateTime? DateTime { get; set; }
 
-        [Required]
-        [RegularExpression(@"^[0-9]+(\.[0-9]+)?$", ErrorMessage = "Formato do preço fora do padrão")]
-        [Range(0, 99999999999.99)]
+
+        [Required(ErrorMessage = "O valor precisa ser informado.")]
+        [Display(Name = "Digite o valor do quadro")]
+        [Column(TypeName = "decimal(10,2)")]
+        [Range(1, 999999.99, ErrorMessage = "O valor deve estar entre 1 e 999.999,99")]
         public decimal? Preco { get; set; }
 
         public int CategoriaId { get; set; }

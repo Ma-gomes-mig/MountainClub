@@ -12,7 +12,7 @@ namespace ProjetoSite1.Data
         {
         }
         public DbSet<UsuarioModel> Usuario { get; set; }
-        public DbSet<ViagemModel> Viagem { get; set;}
+        public DbSet<ViagemModel> Viagem { get; set; }
         public DbSet<CategoriaModel> Categoria { get; set; }
     }
 }
