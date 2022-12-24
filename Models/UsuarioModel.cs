@@ -47,5 +47,7 @@ namespace ProjetoSite1.Models
         [StringLength(200, ErrorMessage = "O {0} deve ter no máximo {1} caracteres")]
         public string ImagemUrl { get; set; }
 
+        public List<ViagemModel> Viagem { get; set; }
+
     }
 }
