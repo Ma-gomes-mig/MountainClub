@@ -21,7 +21,7 @@ namespace ProjetoSite1.Models
 
         [Required(ErrorMessage = "A imagem é obrigatoria")]
         [Display(Name = "Caminho Imagem Usuario")]
-        [StringLength(200, ErrorMessage = "O {0} deve ter no máximo {1} caracteres")]
+        [StringLength(300, ErrorMessage = "O {0} deve ter no máximo {1} caracteres")]
         public string ImgUrl { get; set; }
 
         [Required]
