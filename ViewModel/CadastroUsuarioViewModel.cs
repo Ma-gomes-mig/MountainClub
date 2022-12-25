@@ -6,11 +6,17 @@ namespace ProjetoSite1.ViewModel
     {
         [Required(ErrorMessage = "Informe o nome")]
         [Display(Name = "Digite seu nome")]
-        public string UserName { get; set; }
+        public string UsuarioNome { get; set; }
 
         [Required(ErrorMessage = "Informe o nome")]
         [Display(Name = "Digite seu sobrenome")]        
-        public string LastNameUser { get; set; }
+        public string UsuarioSobrenome { get; set; }
+
+        [Required]
+        [Display(Name = "Informe a Data de Nascimento")]
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = false)]
+        public DateTime DataNascimento { get; set; }
 
         [Required]
         [Display(Name = "Email")]

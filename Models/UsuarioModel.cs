@@ -37,13 +37,13 @@ namespace ProjetoSite1.Models
         [DataType(DataType.Password)]
         public string Password { get; set; }
 
-        [Required(ErrorMessage = "O Endereço deve ser informado")]
+        
         [Display(Name = "digite seu endereço.")]
         [MinLength(5, ErrorMessage = "A descrição deve conter no min 5 caracteres.")]
         [MaxLength(30, ErrorMessage = "A descrição deve conter no máximo 30 caracteres.")]
         public string Endereco { get; set; }
 
-        [Required(ErrorMessage = "A imagem é obrigatoria")]
+        
         [Display(Name = "Caminho Imagem Usuario")]
         [StringLength(200, ErrorMessage = "O {0} deve ter no máximo {1} caracteres")]
         public string ImagemUrl { get; set; }
