@@ -18,8 +18,7 @@ namespace ProjetoSite1.Models
         [Display(Name = "Informe o Sobrenome do Usuario.")]
         public string UsuarioSobrenome { get; set; }
 
-        [Required(ErrorMessage = "Informe o Nick do usuario.")]
-        [RegularExpression(@"^([a-zA-Z](?:(?:(?:\w[\.]?)*)\w)+)([a-zA-Z0-9])$", ErrorMessage = "O Nick está fora dos padrões")]
+        [Required(ErrorMessage = "Informe o Nick do usuario.")]        
         [MaxLength(50, ErrorMessage = "O nome deve conter menos de 50 caracteres")]
         [Display(Name = "Informe o NickName do usuario.")]
         public string NickName { get; set; }
@@ -32,13 +31,11 @@ namespace ProjetoSite1.Models
 
         [Required]
         [Display(Name = "Email")]
-        [RegularExpression(@"^\w +[\w\.] *\@\w + ((-\w +)|(\w*))\.[a-z]{2,3}$", ErrorMessage = "O email está fora dos padrões")]
         [EmailAddress(ErrorMessage = "E-mail em formato inválido.")]        
         public string Email { get; set; }
 
         [Display(Name = "Senha")]
         [Required(ErrorMessage = "Password is required")]
-        [RegularExpression(@"^([a - zA - Z0 - 9@*#]{4,10})$", ErrorMessage = "A senha está fora dos padrões")]
         [StringLength(10, ErrorMessage = "A senha deve ter no minimo 4 e no máximo 10 caracteres", MinimumLength = 4)]
         [DataType(DataType.Password)]
         public string Password { get; set; }

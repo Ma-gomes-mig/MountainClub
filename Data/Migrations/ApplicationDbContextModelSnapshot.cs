@@ -244,7 +244,7 @@ namespace ProjetoSite1.Data.Migrations
 
                     b.HasKey("CategoriaId");
 
-                    b.ToTable("Categoria");
+                    b.ToTable("Categoria", (string)null);
                 });
 
             modelBuilder.Entity("ProjetoSite1.Models.UsuarioModel", b =>
@@ -292,7 +292,7 @@ namespace ProjetoSite1.Data.Migrations
 
                     b.HasKey("UsuarioId");
 
-                    b.ToTable("Usuario");
+                    b.ToTable("Usuario", (string)null);
                 });
 
             modelBuilder.Entity("ProjetoSite1.Models.ViagemModel", b =>
@@ -338,7 +338,7 @@ namespace ProjetoSite1.Data.Migrations
 
                     b.HasIndex("UsuarioId");
 
-                    b.ToTable("Viagem");
+                    b.ToTable("Viagem", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

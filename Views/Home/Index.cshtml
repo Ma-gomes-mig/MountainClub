@@ -1,8 +1,6 @@
 ﻿@{
     Layout = "_Layout";
 }
-
-
 <body id="page-top">    
     <!-- Masthead-->
     <header class="masthead">          
@@ -23,8 +21,9 @@
                 <div class="col-lg-8">
                     <h2 class="text-white mb-4">Crie agora sua conta</h2>
                     <p class="text-white-50">
-                        Crie uma conta conosco de graça agora, sem nem mesmo pagar pela inscrição 
-                        @Html.ActionLink("Inscreva-se","Cadastro","Account")
+                        Crie uma conta conosco de graça agora, sem nem mesmo pagar pela inscrição
+                        <a class="navbar-brand" asp-controller="Account" asp-action="Cadastro">Inscreva-se</a>
+                        @*@Html.ActionLink("Inscreva-se","Cadastro","Account")*@
                         @*<a href="https://startbootstrap.com/theme/grayscale/">Inscreva-se</a>*@                        
                     </p>
                 </div>

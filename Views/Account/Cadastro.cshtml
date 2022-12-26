@@ -1,46 +1,62 @@
 ﻿@using ProjetoSite1.ViewModel;
 @model CadastroUsuarioViewModel
 @{
-    Layout = "_Layout";
+    Layout = null;
 }
-
 <body id="page-top">
-    <div>
-        <h3>Cadastro de Usuarios</h3>
-    </div>
-        <form asp-controller="Account" asp-action="Cadastro" method="post">
-            <hr />
-            <div asp-validation-summary="All" class="text-danger"></div>
-            <div asp-validation-summary="All" class="text-danger"></div>
+    <header class="masthead">
+        <div class="container px-5 px-lg-7 d-flex h-100">
+            <div class="d-flex">
+                <table>
+                    <tr>
+                        <td><img src="~/assets/img/Cadastro.jpg" alt="Registrar Usuário" width="150" height="120" /></td>
+                        <td>
+                            <div class="row">
+                                <div class="col-md-12 col-lg-12">
+                                    <h3>Registrar Usuário</h3>
+                                    <form asp-asp-controller="Account" asp-action="Cadastro" method="post">
+                                        <hr />
+                                        <div asp-validation-summary="All" class="text-danger"></div>
+                                        <div asp-validation-summary="All" class="text-danger"></div>
+                                        <div class="form-group">
+                                            <label asp-for="NickName"></label>
+                                            <input asp-for="NickName" class="form-control" />
+                                            <span asp-validation-for="NickName" class="text-danger"></span>
+                                        </div>
 
-            <div>
-                <label asp-for="NickName"></label>
-                <input asp-for="NickName" class="form-control" />
-                <span asp-validation-for="NickName" class="text-danger"></span>
-            </div>
-            
+                                        <div class="form-group">
+                                            <label asp-for="DataNascimento"></label>
+                                            <input asp-for="DataNascimento" class="form-control" />
+                                            <span asp-validation-for="DataNascimento" class="text-danger"></span>
+                                        </div>
 
-            <div>
-                <label asp-for="Email"></label>
-                <input asp-for="Email" class="form-control" />
-                <span asp-validation-for="Email" class="text-danger"></span>
-            </div>
+                                        <div class="form-group">
+                                            <label asp-for="Email"></label>
+                                            <input asp-for="Email" class="form-control" />
+                                            <span asp-validation-for="Email" class="text-danger"></span>
+                                        </div>
 
-            <div>
-                <label asp-for="Password"></label>
-                <input asp-for="Password" class="form-control" />
-                <span asp-validation-for="Password" class="text-danger"></span>
-            </div>
+                                        <div class="form-group">
+                                            <label asp-for="Password"></label>
+                                            <input asp-for="Password" class="form-control" />
+                                            <span asp-validation-for="Password" class="text-danger"></span>
+                                        </div>
 
-            <div>
-                <label asp-for="ConfirmPassword"></label>
-                <input asp-for="ConfirmPassword" class="form-control" />
-                <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
-            </div><br />            
-            <div class="form-group">
-                <input type="submit" class="btn btn-success" value="Registrar" />
+                                        <div class="form-group">
+                                            <label asp-for="ConfirmPassword"></label>
+                                            <input asp-for="ConfirmPassword" class="form-control" />
+                                            <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="submit" class="btn btn-sucess" value="Registrar"/>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
             </div>
-        </form>
-    
+        </div>
+    </header>
 </body>
-</html>

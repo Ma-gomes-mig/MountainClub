@@ -5,7 +5,7 @@ namespace ProjetoSite1.ViewModel
     public class CadastroUsuarioViewModel
     {        
 
-        [Required(ErrorMessage = "Informe o nome")]
+        [Required(ErrorMessage = "Informe seu Nick")]
         [Display(Name = "NickName")]        
         public string NickName { get; set; }
 
