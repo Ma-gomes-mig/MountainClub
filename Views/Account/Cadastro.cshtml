@@ -14,16 +14,11 @@
             <div asp-validation-summary="All" class="text-danger"></div>
 
             <div>
-                <label asp-for="UsuarioNome"></label>
-                <input asp-for="UsuarioNome" class="form-control" />
-                <span asp-validation-for="UsuarioNome" class="text-danger"></span>
+                <label asp-for="NickName"></label>
+                <input asp-for="NickName" class="form-control" />
+                <span asp-validation-for="NickName" class="text-danger"></span>
             </div>
-
-            <div>
-                <label asp-for="UsuarioSobrenome"></label>
-                <input asp-for="UsuarioSobrenome" class="form-control" />
-                <span asp-validation-for="UsuarioSobrenome" class="text-danger"></span>
-            </div>
+            
 
             <div>
                 <label asp-for="Email"></label>
@@ -41,7 +36,7 @@
                 <label asp-for="ConfirmPassword"></label>
                 <input asp-for="ConfirmPassword" class="form-control" />
                 <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
-            </div>
+            </div><br />            
             <div class="form-group">
                 <input type="submit" class="btn btn-success" value="Registrar" />
             </div>

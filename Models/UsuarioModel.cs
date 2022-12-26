@@ -18,6 +18,12 @@ namespace ProjetoSite1.Models
         [Display(Name = "Informe o Sobrenome do Usuario.")]
         public string UsuarioSobrenome { get; set; }
 
+        [Required(ErrorMessage = "Informe o Nick do usuario.")]
+        [RegularExpression(@"^([a-zA-Z](?:(?:(?:\w[\.]?)*)\w)+)([a-zA-Z0-9])$", ErrorMessage = "O Nick está fora dos padrões")]
+        [MaxLength(50, ErrorMessage = "O nome deve conter menos de 50 caracteres")]
+        [Display(Name = "Informe o NickName do usuario.")]
+        public string NickName { get; set; }
+
         [Required]
         [Display(Name = "Informe a Data de Nascimento")]
         [DataType(DataType.Date)]

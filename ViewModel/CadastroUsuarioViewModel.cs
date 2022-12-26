@@ -3,14 +3,11 @@
 namespace ProjetoSite1.ViewModel
 {
     public class CadastroUsuarioViewModel
-    {
-        [Required(ErrorMessage = "Informe o nome")]
-        [Display(Name = "Digite seu nome")]
-        public string UsuarioNome { get; set; }
+    {        
 
         [Required(ErrorMessage = "Informe o nome")]
-        [Display(Name = "Digite seu sobrenome")]        
-        public string UsuarioSobrenome { get; set; }
+        [Display(Name = "NickName")]        
+        public string NickName { get; set; }
 
         [Required]
         [Display(Name = "Informe a Data de Nascimento")]
@@ -28,8 +25,8 @@ namespace ProjetoSite1.ViewModel
         [DataType(DataType.Password)]
         public string Password { get; set; }
 
-        [Required(ErrorMessage = "A senha é necessária")]
-        [Display(Name = "Digite sua senha")]
+        [Required(ErrorMessage = "É necessário a confirmação de senha")]
+        [Display(Name = "Confirme sua senha")]
         [DataType(DataType.Password)]
         [Compare("Password", ErrorMessage = "As senhas são diferentes")]
         public string ConfirmPassword { get; set; }
